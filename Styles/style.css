@@ -22,12 +22,14 @@
 
 /*styling til navbar container.*/
   nav {
-    display: flex;
+    display: flex; /*Sørger for at alt i navbaren tilpadser sig skærmstørrelsen*/
     align-items: center;
     justify-content: space-between;
     background-color: #e4f1da;
-    padding: 5px 20px;
     font-size: 16px;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
 /*Navbar sektioner. Venste, midten og højre.
@@ -38,13 +40,17 @@ De bliver tildelt som klasser til elementerne i navbaren.*/
   }
   .navbar-left {
     justify-content: flex-start;
+    flex: 1;
   }
   .navbar-center {
-    display: flex;
-    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
   }
   .navbar-right {
     justify-content: flex-end;
+    flex: 1;
   } 
 
 /*Styling til navbar listen*/
@@ -52,7 +58,6 @@ De bliver tildelt som klasser til elementerne i navbaren.*/
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     display: flex;
   }
 
@@ -63,7 +68,7 @@ De bliver tildelt som klasser til elementerne i navbaren.*/
   li a {
     display: block;
     color: black;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-decoration: none;
   }
 
