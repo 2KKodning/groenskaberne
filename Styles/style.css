@@ -1,0 +1,93 @@
+/*font klasser*/
+  .asul-regular {
+    font-family: "Asul", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .asul-bold {
+    font-family: "Asul", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  body {
+    font-family: "asul", serif;
+    font-size: 14px;
+    margin: 0; /*tilføjet så navbaren kan nå ud til kanten.*/
+  }
+
+
+/*Her begynder styling til navbar*/
+
+/*styling til navbar container.*/
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e4f1da;
+    padding: 5px 20px;
+    font-size: 16px;
+  }
+
+/*Navbar sektioner. Venste, midten og højre.
+De bliver tildelt som klasser til elementerne i navbaren.*/
+  .navbar-section {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-left {
+    justify-content: flex-start;
+  }
+  .navbar-center {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-right {
+    justify-content: flex-end;
+  } 
+
+/*Styling til navbar listen*/
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+  }
+
+  li {
+      margin: 20px; /*tilføjer mellemrum mellem elementer*/
+  }
+
+  li a {
+    display: block;
+    color: black;
+    padding: 5px 5px;
+    text-decoration: none;
+  }
+
+/*For at skifte farve når musen er over linket*/
+  li a:hover {
+    background-color: #75b66b;
+    color: white;
+    border-radius: 5px;
+  }
+
+/*Gør det aktive link en anden farve*/
+  .active {
+    background-color: #5c8355;
+    color: white;
+    border-radius: 5px;
+  }
+/*Override så det aktive link ikke skifter farve ved hover*/
+  .active:hover {
+    background-color: #5c8355;
+    color: white;
+    border-radius: 5px;
+  }
+
+/*styling af logo*/
+  .logo {
+    max-height: 50px;
+  }
