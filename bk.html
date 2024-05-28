@@ -3,9 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Bæredygtig Kreativitet</title>
+  <!--link til css filen-->
+    <link rel="stylesheet" href="Styles/style.css">
+  <!--Importeret google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="hideSidebar()"> <!--Onload sørger for at min sidebar er skjult når siden indlæses.-->
+
+  <!--Navbar-->
+  <nav>
+    <!--Navbar til mobilen-->
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+      <li><a href="index.html">Hjem</a></li>
+      <li><a href="bk.html" class="active">Bæredygtig Kreativitet</a></li>
+      <li><a href="galleri.html">Galleri</a></li>
+      <li><a href="nyheder.html">Nyheder</a></li>
+      <li><a href="om-os.html">Om Os</a></li>
+      <li><a href="min-profil.html">Min Profil</a></li>
+    </ul>
+
+    <!--Navbar pc-->
+    <div class="navbar-section navbar-left">
+      <ul>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="50px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        <li class="hideonmobile"><a href="index.html">Hjem</a></li>
+        <li class="hideonmobile"><a href="bk.html" class="active">Bæredygtig Kreativitet</a></li>
+        <li class="hideonmobile"><a href="galleri.html">Galleri</a></li>
+      </ul>
+    </div>
+    <div class="navbar-section navbar-center">
+      <a href="index.html"><img class="logo" src="Billeder/Grønskaberne logo.png" alt=""></a>
+    </div>
+    <div class="navbar-section navbar-right">
+      <ul>
+        <li class="hideonmobile"><a href="nyheder.html">Nyheder</a></li>
+        <li class="hideonmobile"><a href="om-os.html">Om Os</a></li>
+        <li class="hideonmobile"><a href="min-profil.html">Min Profil</a></li>
+      </ul>
+    </div>
+  </nav>
   
+
+<script>
+  function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+  function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+  }
+</script>
 </body>
 </html>
