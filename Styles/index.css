@@ -43,6 +43,17 @@
     background-color: #6ba2b9;
   }
 
+  .button-green {
+    color: black;
+    text-decoration: none;
+    background-color: #75b66b;
+    padding: 15px 25px;
+    border-radius: 5px;
+  }
+  .button-green:hover {
+    background-color: #5c8355;
+  }
+
   /*image-container til resizing af billeder for at undgå forvrængninger*/
   .image-container {
     display: flex;
@@ -135,9 +146,52 @@
     margin-bottom: 10px;
   }
 
-  
+  .flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+  }
+  .quote-box {
+    display: flex;
+    flex: 1;
+    text-align: left;
+    flex-wrap: wrap;
+    padding: 100px;
+    background-image: url(../Billeder/baggrund-vandfarve.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .quote-box p {
+    margin: 10px;
+  }
 
-  
+  .log-ind {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 100px;
+  }
+    .log-ind a {
+    width: 100px;
+    margin: 10px;
+    }
+
+    .waman {
+      width: 100%;
+      height: 250px;
+      background-image: url(../Billeder/to\ kvinder1.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
   @media (max-width: 1000px){
     .title h1 {
       font-size: 48px;
@@ -149,6 +203,12 @@
       height: fit-content;
     }
     .fading-image-third {
+      height: fit-content;
+    }
+    .flexbox {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
       height: fit-content;
     }
   }
